@@ -1,0 +1,109 @@
+body, html { 
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Background color for the first screen */
+    transition: opacity 1s ease; /* Fade transition for the body */
+}
+
+.container {
+    text-align: center;
+}
+
+.enter-button {
+    position: absolute; /* Position it absolutely */
+    top: calc(50% - 50px); /* Adjust top position to center it */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center it horizontally and vertically */
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid white; /* White outline */
+    border-radius: 5px;
+    background-color: black; /* Black background */
+    color: white; /* Button text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    z-index: 2; /* Ensure it is above the name box */
+}
+
+.enter-button:hover {
+    background-color: white; /* Change background on hover */
+    color: black; /* Change text color on hover */
+}
+
+.video-container {
+    position: absolute; /* Position the video container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Start with the video invisible */
+    visibility: hidden; /* Start hidden */
+    transition: opacity 2s ease; /* Smooth transition for fade-in */
+    z-index: -1; /* Ensure it's behind the button initially */
+}
+
+.fade-in {
+    opacity: 1; /* Fully visible when fade-in is triggered */
+}
+
+.name-box {
+    position: absolute;
+    top: calc(50% + 40px); /* Move it slightly below the center */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    background-color: rgba(64, 64, 64, 0.8); /* Darker translucent gray */
+    color: white; /* Text color */
+    font-size: 30px; /* Font size */
+    text-align: center;
+    opacity: 0; /* Start invisible */
+    transition: opacity 2s ease; /* Fade transition */
+    z-index: 1; /* Ensure it's above the video */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.subtitle {
+    font-size: 16px; /* Adjust size as needed */
+    color: white; /* Text color */
+    margin-top: 5px; /* Space between the main title and subtitle */
+}
+
+.small-button {
+    width: 20px; /* Set width to an even smaller size */
+    height: 20px; /* Set height to an even smaller size */
+    background-image: url('download.png'); /* Path to your image */
+    background-size: 100% 100%; /* Fill the button area completely */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    border: none; /* No outline */
+    cursor: pointer; /* Pointer cursor */
+    position: absolute; /* Position it relative to the name box */
+    top: calc(50% + 90px); /* Position it directly below the name box */
+    left: calc(50% - 105px); /* Adjust to move slightly to the right */
+    transform: translate(-50%, 0); /* Center it horizontally */
+    opacity: 0; /* Start invisible */
+    transition: opacity 2s ease; /* Fade transition */
+}
+
+.second-button {
+    width: 20px; /* Same size as the first button */
+    height: 20px; /* Same size as the first button */
+    background-image: url('Cashapp.png'); /* Path to your image */
+    background-size: 100% 100%; /* Fill the button area completely */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    border: none; /* No outline */
+    cursor: pointer; /* Pointer cursor */
+    position: absolute; /* Position it relative to the name box */
+    top: calc(50% + 90px); /* Position it directly below the name box */
+    left: calc(50% - 80px); /* Adjust to position it slightly to the right of the first button */
+    transform: translate(-50%, 0); /* Center it horizontally */
+    opacity: 0; /* Start invisible */
+    transition: opacity 2s ease; /* Fade transition */
+}
+
+video {
+    width: 100%; /* Make video responsive */
+    height: auto; /* Maintain aspect ratio */
+}
